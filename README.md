@@ -1,4 +1,4 @@
-# Metaheuristic-Driven-Bayesian-Speckle-Denoising-MDBSD-
+# Metaheuristic Driven Bayesian Speckle Denoising MDBSD
 Here's the MATLAB implementation of the Metaheuristic-Driven Bayesian Speckle Denoising (MDBSD), whose main approach is the OCT image speckle denoising.
 
 
