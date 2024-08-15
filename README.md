@@ -7,7 +7,8 @@ Here's the MATLAB implementation of the Metaheuristic-Driven Bayesian Speckle De
 '[Enhancing Retinal OCT Scans via Metaheuristic-Driven Bayesian Speckle Denoising](https://doi.org/10.1109/CBMS61543.2024.00062)'. [paper](https://www.researchgate.net/publication/382588237_Enhancing_Retinal_OCT_Scans_via_Metaheuristic-Driven_Bayesian_Speckle_Denoising) presented in the 2024 IEEE 37th International Symposium on Computer-Based Medical Systems (CBMS) by [Oscar Ramos-Soto](https://scholar.google.com/citations?user=EzhiQbkAAAAJ&hl) et al., 
 
 
-![p18_t57_Cr](https://github.com/user-attachments/assets/e7c27334-db39-4606-93d9-aea7c5c781f6)![p18_t57_Enh](https://github.com/user-attachments/assets/fe3cb747-09bb-40f0-9fcc-c2c313748acc)
+![image](https://github.com/user-attachments/assets/0672482d-8240-4a16-8813-fcf7b29525c7)
+
 
 
 ## Citation
