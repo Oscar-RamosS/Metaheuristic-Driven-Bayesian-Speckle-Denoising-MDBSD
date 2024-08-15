@@ -1,0 +1,47 @@
+clear all
+close all
+
+Io = imread('p4_t64_RAW.png');
+Img_norm = ImgNormalize(Io);
+img = imresize(Img_norm, [200,200]);
+
+nP =  3; %Particles number
+MaxIt = 2; %Maximum iterations
+lb = 1; %Lower boundary
+ub = 30; %Lower boundary
+dim = 1; %Dimensions
+
+[Best_Cost_PSO,Best_Value_PSO,Convergence_curve_PSO] = PSO(nP, MaxIt, lb, ub, dim, @(x)fitnessSP(img, x));
+[Best_Cost_DE,Best_Value_DE,Convergence_curve_DE] = DE(nP, MaxIt, lb, ub, dim, @(x)fitnessSP(img, x));
+[Best_Cost_GA,Best_Value_GA,Convergence_curve_GA] = GA(nP, MaxIt, lb, ub, dim, @(x)fitnessSP(img, x));
+
+Res_DE = transFSP(img, Best_Value_DE);
+Res_DE = transFSP(img, Best_Value_DE);
+Res_DE = transFSP(img, Best_Value_DE);
+
+% filename = 'ARTICLE\p2CG.mat';  % Name of the .mat file you want to create
+% save(filename, 'Convergence_curve_RUNr');
+% % 
+% figure(1)
+% imshow(img)
+% imwrite(img,'ARTICLE\p2_t73_Cr.png')
+% figure(2)
+% imshow(A,[])
+% imwrite(A,'ARTICLE\p2_t73_Enh.png')
+
+% Plot convergence curves
+figure;
+plot(1:MaxIt, Convergence_curve_PSO, 'LineWidth', 2, 'DisplayName', 'PSO');
+hold on;
+plot(1:MaxIt, Convergence_curve_DE, 'LineWidth', 2, 'DisplayName', 'DE');
+hold on;
+plot(1:MaxIt, Convergence_curve_GA, 'LineWidth', 2, 'DisplayName', 'GA');
+hold on;
+title('Convergence Curves');
+xlabel('Iteration');
+ylabel('Best Fitness Value');
+legend('show');
+grid on;
+hold off;
+toc
+saveas(gcf, 'convergence_curve.png');
